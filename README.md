@@ -106,7 +106,7 @@ DQN approximates the action-value function with a neural network. The network pr
 The Bellman target is computed as:
 
 ```math
-y = r + γ max_a Q_target(s', a)
+y = r + γ max_a Q_{target}(s', a)
 ```
 
 The model is trained by minimizing the difference between the predicted Q-value and the Bellman target using Huber loss.
@@ -118,7 +118,7 @@ The model is trained by minimizing the difference between the predicted Q-value 
 Experience replay stores past transitions in a replay buffer:
 
 ```math
-(state, action, reward, next_state, done)
+(state, action, reward, next_{state}, done)
 ```
 
 During training, mini-batches are sampled from the replay buffer. This reduces correlation between consecutive samples and improves training stability.
@@ -138,8 +138,8 @@ Standard DQN may overestimate Q-values because the same target network is used t
 Double DQN separates these two steps:
 
 ```math
-next_(action) = arg max_a Q_online(s', a)
-target_(value) = Q_target(s', next_action)
+next_{action} = argmax_{a} Q_{online}(s', a)
+target_{value} = Q_{target}(s', next_{action})
 ```
 
 This reduces overestimation bias and improves learning stability.
@@ -197,7 +197,7 @@ While this can improve sample efficiency, in Pong it also made training less sta
 
 In v4, I reduced PER strength to:
 
-```math
+```text
 alpha = 0.2
 ```
 
