@@ -105,7 +105,7 @@ DQN approximates the action-value function with a neural network. The network pr
 
 The Bellman target is computed as:
 
-```text
+```math
 y = r + γ max_a Q_target(s', a)
 ```
 
@@ -137,7 +137,7 @@ Standard DQN may overestimate Q-values because the same target network is used t
 
 Double DQN separates these two steps:
 
-```text
+```math
 next_action = argmax_a Q_online(s', a)
 target_value = Q_target(s', next_action)
 ```
@@ -152,7 +152,7 @@ Prioritized Experience Replay samples transitions according to their TD error. T
 
 The sampling priority is:
 
-```text
+```math
 priority_i = |TD error_i| + ε
 ```
 
@@ -164,7 +164,7 @@ The sampling probability is controlled by the parameter `alpha`.
 
 Multi-step return was implemented in early enhanced DQN versions. It accumulates rewards over multiple time steps before bootstrapping:
 
-```text
+```math
 G = r1 + γr2 + γ²r3 + ... + γⁿQ(s_n, a_n)
 ```
 
@@ -197,7 +197,7 @@ While this can improve sample efficiency, in Pong it also made training less sta
 
 In v4, I reduced PER strength to:
 
-```text
+```math
 alpha = 0.2
 ```
 
