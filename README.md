@@ -117,7 +117,7 @@ The model is trained by minimizing the difference between the predicted Q-value 
 
 Experience replay stores past transitions in a replay buffer:
 
-```text
+```math
 (state, action, reward, next_state, done)
 ```
 
@@ -138,8 +138,8 @@ Standard DQN may overestimate Q-values because the same target network is used t
 Double DQN separates these two steps:
 
 ```math
-next_action = argmax_a Q_online(s', a)
-target_value = Q_target(s', next_action)
+next_(action) = arg max_a Q_online(s', a)
+target_(value) = Q_target(s', next_action)
 ```
 
 This reduces overestimation bias and improves learning stability.
