@@ -34,7 +34,7 @@ The final enhanced DQN first reaches a score above 19 at **1.9M environment step
 
 The following demo video presents the source code structure, implementation details, evaluation results, and trained agent performance.
 
-[![Demo Video](https://www.youtube.com/shorts/uGrV9GgVTWA.jpg)](https://www.youtube.com/shorts/uGrV9GgVTWA)
+[![Demo Video](demo.png)](https://www.youtube.com/shorts/uGrV9GgVTWA)
 
 
 
