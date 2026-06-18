@@ -1,4 +1,4 @@
-# LAB5 – Deep Q-Network (DQN) and Enhanced DQN Variants
+# Deep Q-Network (DQN) and Enhanced DQN Variants
 
 ## 📌 Overview
 
