@@ -118,7 +118,7 @@ The model is trained by minimizing the difference between the predicted Q-value 
 Experience replay stores past transitions in a replay buffer:
 
 ```math
-(state, action, reward, next_{state}, done)
+(state, action, reward, next state, done)
 ```
 
 During training, mini-batches are sampled from the replay buffer. This reduces correlation between consecutive samples and improves training stability.
